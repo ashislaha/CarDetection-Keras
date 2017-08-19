@@ -1,7 +1,7 @@
 # CarDetection-Keras
 "Car Detection" is trained in Keras using Tensorflow as back-end. It's taking an image as input and it  
 gives a binary decision whether a car is present in the image or not. It's a Dense Neural Network. After train, converting the .h5 model
-into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that).
+into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that :  https://github.com/ashislaha/CarDetection-iOS ).
 
 This is the accuray after trained by 50 epochs , almost 97% accurate on train data & on unknown test data 80% accurate
 
