@@ -1,9 +1,6 @@
 
 # import classes and functions 
 
-from keras.models import Sequential 
-from keras.layers.core import Dense, Activation
-from keras.utils import np_utils
 from PIL import Image
 import matplotlib.pyplot as plot
 import os,sys

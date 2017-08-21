@@ -5,3 +5,10 @@ DNN_ml_model.author = 'Ashis Laha'
 DNN_ml_model.description = 'Use for Car Detection'
 DNN_ml_model.save('car_detection_keras_DNN.mlmodel')
 print(DNN_ml_model)
+
+
+DNN_ml_model = coremltools.converters.keras.convert('car_detection_keras_CNN_model.h5')
+DNN_ml_model.author = 'Ashis Laha'
+DNN_ml_model.description = 'Use for Car Detection'
+DNN_ml_model.save('car_detection_keras_CNN.mlmodel')
+print(DNN_ml_model)

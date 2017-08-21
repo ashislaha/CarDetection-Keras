@@ -5,9 +5,16 @@ from PIL import Image
 import matplotlib.pyplot as plot
 from optparse import OptionParser
 
+mode = "CNN"
+model = None
 
-model = load_model('car_detection_keras_DNN_model.h5')
+if mode == "DNN":
+    model = load_model('car_detection_keras_DNN_model.h5')
+else:
+    model = load_model('car_detection_keras_CNN_model.h5')
+
 row,column = 100,100
+
 
 # take input to test it 
 parser = OptionParser()
@@ -51,7 +58,12 @@ def normalize(picture):
 
 
 X_test = normalize(gray_image)
-X_test = X_test.reshape(1, row*column) 
+
+if mode == "DNN":
+    X_test = X_test.reshape(1, row*column) # [row*column] - 1D input for DNN
+else:
+    X_test = X_test.reshape(1, row, column, 1)  # (1, row, column) 3D input for CNN 
+
 
 # Do predictions 
 

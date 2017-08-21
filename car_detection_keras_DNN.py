@@ -3,15 +3,15 @@
 
 from keras.models import Sequential 
 from keras.layers.core import Dense, Activation
+from keras.layers import Dropout, Flatten 
 from keras.utils import np_utils
 from PIL import Image
-import matplotlib.pyplot as plot
 import os,sys
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 from array import array
 import numpy as np 
 import matplotlib.pyplot as plot
-from random import shuffle
+np.random.seed(0)  #for reproducibility 
 
  
 # Training & Testing Data
@@ -132,8 +132,9 @@ model.add(Activation('relu'))
 model.add(Dense(classes, input_dim=hidden_neurons)) 
 model.add(Activation('softmax'))
 
-# compile model 
-model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='rmsprop')
+# Define Loss & compile model 
+model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='rmsprop') 
+# optimizer - "rmsprop" / "sgd"/"adadelta" , loss - "binary_crossentropy" / "categorical_crossentropy"
 
 # fit the model 
 
