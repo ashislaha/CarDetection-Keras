@@ -3,6 +3,9 @@
 gives a binary decision whether a car is present in the image or not. It's a Dense Neural Network. After train, converting the .h5 model
 into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that :  https://github.com/ashislaha/CarDetection-iOS ).
 
+Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA . Put the data set into your working 
+directory to train the model.
+
 This is the accuray after trained by 50 epochs , almost 97% accurate on train data & on unknown test data 80% accurate
 
 963/963 [==============================] - 0s - loss: 7.4298 - acc: 0.5265      
