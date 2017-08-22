@@ -133,7 +133,7 @@ model.add(Dense(classes, input_dim=hidden_neurons))
 model.add(Activation('softmax'))
 
 # Define Loss & compile model 
-model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='rmsprop') 
+model.compile(loss='binary_crossentropy', metrics=['accuracy'], optimizer='rmsprop') 
 # optimizer - "rmsprop" / "sgd"/"adadelta" , loss - "binary_crossentropy" / "categorical_crossentropy"
 
 # fit the model 
