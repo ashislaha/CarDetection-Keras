@@ -12,6 +12,7 @@ CNN gives 99.5% accuracy on Training data & 85.7% on Test data.
 DNN gives 96%   accuracy on Training data & 86% on Test data.
 
 Used Metrics to train in CNN : loss='binary_crossentropy', metrics=['accuracy'], optimizer='adadelta'
+
 Used Metrics to train in DNN : loss='binary_crossentropy', metrics=['accuracy'], optimizer='rmsprop'
 
 CNN TRAIN RESULTS : 
