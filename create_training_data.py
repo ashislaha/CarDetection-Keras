@@ -24,37 +24,45 @@ row,column = 100,100
 listingCar = os.listdir(pathTrainDataCar)
 print(listingCar)
 for file in listingCar:
-	img = Image.open(pathTrainDataCar + file)
-	resizeImg = img.resize((row,column))
-	gray = resizeImg.convert('L')
-	gray.save(pathResizedTrainDataCar + file)
+	if file != '.DS_Store' :
+		img = Image.open(pathTrainDataCar + file)
+		resizeImg = img.resize((row,column))
+		gray = resizeImg.convert('L')
+		gray.save(pathResizedTrainDataCar + file)
+	
 
 
 listingBuilding = os.listdir(pathTrainDataBuilding)
 print(listingBuilding)
 for file in listingBuilding:
-	img = Image.open(pathTrainDataBuilding + file)
-	resizeImg = img.resize((row,column))
-	gray = resizeImg.convert('L')
-	gray.save(pathResizedTrainDataBuilding + file)
+	if file != '.DS_Store':
+		img = Image.open(pathTrainDataBuilding + file)
+		resizeImg = img.resize((row,column))
+		gray = resizeImg.convert('L')
+		gray.save(pathResizedTrainDataBuilding + file)
+	
 
 
 listingRoad = os.listdir(pathTrainDataRoad)
 print(listingRoad)
 for file in listingRoad:
-	img = Image.open(pathTrainDataRoad + file)
-	resizeImg = img.resize((row,column))
-	gray = resizeImg.convert('L')
-	gray.save(pathResizedTrainDataRoad + file)
+	if file != '.DS_Store':
+		img = Image.open(pathTrainDataRoad + file)
+		resizeImg = img.resize((row,column))
+		gray = resizeImg.convert('L')
+		gray.save(pathResizedTrainDataRoad + file)
+	
 
 
 listingTestData = os.listdir(pathTestData)
 print(listingTestData)
 for file in listingTestData:
-	img = Image.open(pathTestData+file)
-	resizeImage = img.resize((row,column))
-	gray = resizeImage.convert('L')
-	gray.save(pathResizedTestData+file)
+	if file != '.DS_Store':
+		img = Image.open(pathTestData+file)
+		resizeImage = img.resize((row,column))
+		gray = resizeImage.convert('L')
+		gray.save(pathResizedTestData+file)
+	
 
 
 

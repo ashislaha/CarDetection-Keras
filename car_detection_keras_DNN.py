@@ -34,10 +34,12 @@ classes = 2
 
 listingCar = os.listdir(pathResizedTrainDataCar)
 for file in listingCar:
-	img = Image.open(pathResizedTrainDataCar + file)
-	x = img_to_array(img)
-	X_train.append(x)
-	Y_train.append(0) # CAR 
+	if file != '.DS_Store' :
+		img = Image.open(pathResizedTrainDataCar + file)
+		x = img_to_array(img)
+		X_train.append(x)
+		Y_train.append(0) # CAR 
+	
 
 
 print(X_train[0].shape)
@@ -47,34 +49,39 @@ print("Car Train data : %d" %len(X_train))
 
 listingBuilding = os.listdir(pathResizedTrainDataBuilding)
 for file in listingBuilding:
-	img = Image.open(pathResizedTrainDataBuilding + file)
-	x = img_to_array(img)
-	X_train.append(x)
-	Y_train.append(1) # NOT CAR (Building)
+	if file != '.DS_Store' :
+		img = Image.open(pathResizedTrainDataBuilding + file)
+		x = img_to_array(img)
+		X_train.append(x)
+		Y_train.append(1) # NOT CAR (Building)
+	
 	
 
 # ........................... Road ....................................
 
 listingRoad = os.listdir(pathResizedTrainDataRoad)
 for file in listingRoad:
-	img = Image.open(pathResizedTrainDataRoad + file)
-	x = img_to_array(img)
-	X_train.append(x)
-	Y_train.append(1) # NOT CAR (Road)
+	if file != '.DS_Store' :
+		img = Image.open(pathResizedTrainDataRoad + file)
+		x = img_to_array(img)
+		X_train.append(x)
+		Y_train.append(1) # NOT CAR (Road)
+	
 
 
 # ........................... Test Data ...............................
 
 listingTestData = os.listdir(pathResizedTestData)
 for file in listingTestData:
-	img = Image.open(pathResizedTestData + file)
-	x = img_to_array(img)
-	X_test.append(x)
-	if file.startswith("test_car"):
-		Y_test.append(0) # CAR
-	else:
-		Y_test.append(1) # NOT CAR 
-
+	if file != '.DS_Store' :
+		img = Image.open(pathResizedTestData + file)
+		x = img_to_array(img)
+		X_test.append(x)
+		if file.startswith("test_car"):
+			Y_test.append(0) # CAR
+		else:
+			Y_test.append(1) # NOT CAR 
+	
 
 # ......................... Train Data Reshaping .......................
 total_input = len(X_train)
