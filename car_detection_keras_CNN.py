@@ -127,7 +127,7 @@ Y_test = np_utils.to_categorical(Y_test, classes)
 # Set up parameters
 input_size = row * column
 batch_size = 10    
-hidden_neurons = 30 #100    
+hidden_neurons = 30    
 epochs = 25
  
 
