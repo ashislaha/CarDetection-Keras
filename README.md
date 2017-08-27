@@ -6,6 +6,9 @@ into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for th
 Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA . Put the data set into your working 
 directory to train the model. It contains around 1500 training data & 100 test data where both car & non-car images are present.
 
+If you want to test a random image whether car is present in the image or not : 
+goto "model" directory -->  paste your image in "test" folder --> $ python predictions.py --file='test/your_image'
+
 Used both Convolutional Neural Network(CNN) & Dense Neural Network(DNN) to train the model. 
 
 CNN gives 99.6% accuracy on Training data & 88.6% on Test data.
