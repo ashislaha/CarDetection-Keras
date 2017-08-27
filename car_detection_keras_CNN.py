@@ -19,6 +19,7 @@ testCarExamples,testNonCarExamples = 122,116 # Documentation purpose
 pathResizedTrainDataCar = 'ResizeTrainImages/car/'
 pathResizedTrainDataBuilding = 'ResizeTrainImages/building/'
 pathResizedTrainDataRoad = 'ResizeTrainImages/road/'
+pathResizedTrainDataRandom = 'ResizeTrainImages/random/'
 pathResizedTestData = 'ResizeTrainImages/validation/'
 
 # create a matrix to flatten all the values
@@ -67,6 +68,16 @@ for file in listingRoad:
 		Y_train.append(1) # NOT CAR (Road)
 	
 
+
+# .......................... Random .................................
+
+listingRandom = os.listdir(pathResizedTrainDataRandom)
+for file in listingRandom:
+	if file != '.DS_Store' :
+		img = Image.open(pathResizedTrainDataRandom + file)
+		x = img_to_array(img)
+		X_train.append(x)
+		Y_train.append(1) # NOT CAR (Random)
 
 # ........................... Test Data ...............................
 

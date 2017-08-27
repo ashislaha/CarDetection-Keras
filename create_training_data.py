@@ -11,11 +11,13 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 pathTrainDataCar = 'TrainImages/car/'
 pathTrainDataBuilding = 'TrainImages/building/'
 pathTrainDataRoad = 'TrainImages/road/'
+pathTrainDataRandom = 'TrainImages/random/'
 pathTestData = 'TrainImages/validation/'
 
 pathResizedTrainDataCar = 'ResizeTrainImages/car/'
 pathResizedTrainDataBuilding = 'ResizeTrainImages/building/'
 pathResizedTrainDataRoad = 'ResizeTrainImages/road/'
+pathResizedTrainDataRandom = 'ResizeTrainImages/random/'
 pathResizedTestData = 'ResizeTrainImages/validation/'
 
 # Resize the images 
@@ -52,6 +54,16 @@ for file in listingRoad:
 		gray = resizeImg.convert('L')
 		gray.save(pathResizedTrainDataRoad + file)
 	
+
+
+listingRandom = os.listdir(pathTrainDataRandom)
+print(listingRandom)
+for file in listingRandom:
+	if file != '.DS_Store':
+		img = Image.open(pathTrainDataRandom + file)
+		resizeImg = img.resize((row,column))
+		gray = resizeImg.convert('L')
+		gray.save(pathResizedTrainDataRandom + file)
 
 
 listingTestData = os.listdir(pathTestData)
