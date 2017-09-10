@@ -3,7 +3,10 @@
 gives a binary decision whether a car is present in the image or not. It's a Dense Neural Network. After train, converting the .h5 model
 into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that :  https://github.com/ashislaha/CarDetection-iOS ).
 
-Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA . Put the data set into your working 
+Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA   OR 
+https://s3.console.aws.amazon.com/s3/object/car-detection-images/Archive.zip?region=ap-south-1&tab=overview .
+
+Put the data set into your working 
 directory to train the model. It contains around 1500 training data & 100 test data where both car & non-car images are present.
 
 If you want to test a random image whether car is present in the image or not : 
