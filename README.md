@@ -46,6 +46,13 @@ That’s it, tensor flow is installed now.
 
     $ sudo pip install keras
     
+Install some other dependancies if not install:
+
+    $ sudo pip install Pillow # to install the image library
+    $ sudo pip install h5py # installing hierarchical data format
+    $ sudo pip install coremltools # installing core ml tools to convert .h5 to .mlmodel
+
+    
 ### Training Data set creation:     
 
 Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA   OR 
