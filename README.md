@@ -59,14 +59,16 @@ goto "model" directory -->  paste your image in "test" folder --> $ python predi
 
 Used both Convolutional Neural Network(CNN) & Dense Neural Network(DNN) to train the model. 
 
+<b>
 CNN gives 99.6% accuracy on Training data & 88.6% on Test data.
 DNN gives 92%   accuracy on Training data & 87% on Test data.
+</b>
 
 Used Metrics to train in CNN : loss='binary_crossentropy', metrics=['accuracy'], optimizer='adadelta'
 
 Used Metrics to train in DNN : loss='binary_crossentropy', metrics=['accuracy'], optimizer='rmsprop'
 
-CNN TRAIN RESULTS : 
+### CNN TRAIN RESULTS : 
 
 1475/1475 [==============================] - 14s - loss: 0.6336 - acc: 0.6142 - val_loss: 0.6956 - val_acc: 0.9207
 
@@ -147,7 +149,7 @@ Epoch 25/25
 
 
 
-DNN TRAIN RESULTS : 
+### DNN TRAIN RESULTS : 
 
 This is the accuray after trained by 50 epochs , almost 92% accurate on train data & on unknown test data 87% accurate
 
@@ -251,3 +253,30 @@ Epoch 49/50
 Epoch 50/50
 1639/1639 [==============================] - 1s - loss: 0.1721 - acc: 0.9201     
  32/238 [===>..........................] - ETA: 0s('\nTest accuracy:', 0.87394957832929465)
+ 
+ ## Convert the .h5 file into .mlmodel:
+       
+     import coremltools
+
+     DNN_ml_model = coremltools.converters.keras.convert('car_detection_keras_DNN_model.h5')
+     DNN_ml_model.author = 'Ashis Laha'
+     DNN_ml_model.description = 'Use for Car Detection'
+     DNN_ml_model.save('car_detection_keras_DNN.mlmodel')
+     print(DNN_ml_model)
+
+
+     DNN_ml_model = coremltools.converters.keras.convert('car_detection_keras_CNN_model.h5')
+     DNN_ml_model.author = 'Ashis Laha'
+     DNN_ml_model.description = 'Use for Car Detection'
+     DNN_ml_model.save('car_detection_keras_CNN.mlmodel')
+     print(DNN_ml_model)
+ 
+ ### CNN mlmodel specification: 
+ <img width="585" alt="cnn_spec" src="https://user-images.githubusercontent.com/10649284/37861209-8cf529f4-2f5a-11e8-9528-072429c8ab02.png">
+ 
+ 
+ ### DNN mlmodel specification: 
+<img width="906" alt="dnn_spec" src="https://user-images.githubusercontent.com/10649284/37861210-8fd8b122-2f5a-11e8-8783-72a3c9ee832d.png">
+ 
+ You can use .mlmodel to your xcode.
+ 
