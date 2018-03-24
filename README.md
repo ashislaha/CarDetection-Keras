@@ -1,7 +1,52 @@
 # CarDetection-Keras
 "Car Detection" is trained in Keras using Tensorflow as back-end. It's taking an image as input and it  
-gives a binary decision whether a car is present in the image or not. It's a Dense Neural Network. After train, converting the .h5 model
-into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that :  https://github.com/ashislaha/CarDetection-iOS ).
+gives a binary decision whether a car is present in the image or not. It's a Dense Neural Network. After train, converting the .h5 model into .mlmodel to use in Xcode. (Please check the CarDetection-iOS project for that : https://github.com/ashislaha/CarDetection-iOS).
+
+
+## prerequisite:
+
+### (1). Install pip:
+(package management system used to install and manage software packages written in python).
+  
+    sudo python -m ensurepip
+OR 
+     
+    sudo easy_install pip
+
+### (2). Install tensor flow:
+
+<b> A. Update virtual environment </b>
+
+    $ sudo easy_install pip
+    $ pip install --upgrade virtualenv 
+
+
+<b> B. Create a virtual environment: </b>
+
+    $ virtualenv --system-site-packages targetDirectory # for Python 2.7
+    $ virtualenv --system-site-packages -p python3 targetDirectory # for Python 3.n
+
+<b> C. Activate virtual environment: </b>
+
+    $ cd targetDirectory
+    $ source ./bin/activate      # If using bash, sh, ksh, or zsh
+
+<b> D. Install tensor flow: </b>
+
+    (targetDirectory)$ sudo  pip install --upgrade tensorflow      # for Python 2.7
+    (targetDirectory)$ sudo  pip3 install --upgrade tensorflow     # for Python 3.n
+
+If it’s getting failed due to numpy or some other package then install numpy/that package
+
+    $ sudo pip install --ignore-installed numpy
+
+That’s it, tensor flow is installed now.
+
+### (3). Install Keras
+
+    $ sudo pip install keras
+    
+### Training Data set creation:     
 
 Training Data set is uploaded in https://drive.google.com/drive/folders/0B0QC-w3ZqaT1RzlGeGtYeVE2cTA   OR 
 https://s3.ap-south-1.amazonaws.com/car-detection-images/Archive.zip .
