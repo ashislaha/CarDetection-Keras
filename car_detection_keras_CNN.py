@@ -127,7 +127,7 @@ Y_test = np.array(Y_test)
 Y_test = Y_test.reshape(total_testData, 1)  
 
 
-# It's a binary-class problem, output is 1 (CAR) and 2 (NOT CAR). it's a good practice to use "one hot encoding" to class values 
+# It's a binary-class problem, output is 0 (CAR) and 1(NOT CAR). it's a good practice to use "one hot encoding" to class values 
 
 print(Y_train.shape)
 print(Y_train[0])
@@ -143,14 +143,13 @@ epochs = 25
  
 
 # Build the model
- 
 model = Sequential() 
-model.add(Convolution2D(32, (2, 2), input_shape=(row, column, 1)))
+model.add(Convolution2D(32, (2, 2), input_shape=(row, column, 1))) # 32 convolutional filter with size (2,2)
 model.add(Activation('relu'))
 model.add(Convolution2D(32, (2, 2)))  
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2))) 
-model.add(Dropout(0.5))                
+model.add(MaxPooling2D(pool_size=(2, 2))) # filter size (2,2)
+model.add(Dropout(0.5))  # Drop out is used for avoiding data overfitting by reducing the NN branches.              
 model.add(Flatten())
   
 model.add(Dense(hidden_neurons)) 

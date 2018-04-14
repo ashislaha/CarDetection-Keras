@@ -24,7 +24,7 @@ URL = options.filename
 print("URL ------> %s" %URL)
 
 img = Image.open(URL)
-print("TESTING IMAGE -----> %s %s %s" %( img.bits, img.size, img.format))
+#print("TESTING IMAGE -----> %s %s %s" %( img.bits, img.size, img.format))
 
 # Resize the image
 img = img.resize((row,column),Image.ANTIALIAS)
@@ -71,13 +71,13 @@ classes = model.predict(X_test)
 print(classes)
 
 maxVal = classes[0].max()
-indexVal = np.where(classes[0]==maxVal) # result iss an array
+indexVal = np.where(classes[0]==maxVal) # result is an array
 
 
 if (indexVal[0] == 0):
-    print("......... It's CAR .........")
+    print("\n......... It's CAR .........\n")
 else: 
-    print(".......... Not A Car .......")
+    print("\n.......... Not A Car .......\n")
 
 
 

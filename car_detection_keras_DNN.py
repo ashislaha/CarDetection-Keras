@@ -128,7 +128,7 @@ Y_test = np.array(Y_test)
 Y_test = Y_test.reshape(total_testData, 1)  
 
 
-# It's a binary-class problem, output is 1 (CAR) and 2 (NOT CAR). it's a good practice to use "one hot encoding" to class values 
+# It's a binary-class problem, output is 0 (CAR) and 1 (NOT CAR). it's a good practice to use "one hot encoding" to class values 
 
 print(Y_train.shape)
 print(Y_train[0])
@@ -138,8 +138,8 @@ Y_test = np_utils.to_categorical(Y_test, classes)
  
 # Set up parameters
 input_size = row * column
-batch_size = 10    
-hidden_neurons = 100    
+batch_size = 10 
+hidden_neurons = 100
 epochs = 50
  
 # Build the model
@@ -155,7 +155,6 @@ model.compile(loss='binary_crossentropy', metrics=['accuracy'], optimizer='rmspr
 # optimizer - "rmsprop" / "sgd"/"adadelta" , loss - "binary_crossentropy" / "categorical_crossentropy"
 
 # fit the model 
-
 model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, verbose=1)
  
 # Test 

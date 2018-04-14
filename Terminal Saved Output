@@ -1,0 +1,141 @@
+Last login: Fri Feb 23 09:22:32 on console
+C02QP68UG8WP:~ ashis.laha$ cd /Users/ashis.laha/Documents/Python/virtualenv2.7 
+C02QP68UG8WP:virtualenv2.7 ashis.laha$ cd /Users/ashis.laha/Documents/Python/virtualenv2.7/bin 
+C02QP68UG8WP:bin ashis.laha$ source activate
+(virtualenv2.7) C02QP68UG8WP:bin ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:bin ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:bin ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:bin ashis.laha$ cd /Users/ashis.laha/Documents/Python/CarDetection/model 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ cd /Users/ashis.laha/Documents/Python/CarDetection 
+(virtualenv2.7) C02QP68UG8WP:CarDetection ashis.laha$ python car_detection_keras_CNN.py 
+Using TensorFlow backend.
+(100, 100, 1)
+Car Train data : 880
+Total Train Data : 1655
+X_train shape
+(1655, 100, 100, 1)
+Y_train Shape
+(1655, 1)
+Total Test Data : 238
+(1655, 1)
+[0]
+Train on 1489 samples, validate on 166 samples
+Epoch 1/25
+2018-02-23 16:04:57.273004: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:04:57.273034: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:04:57.273041: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:04:57.273046: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+1489/1489 [==============================] - 17s - loss: 0.5853 - acc: 0.6635 - val_loss: 0.4544 - val_acc: 0.8675
+Epoch 2/25
+1489/1489 [==============================] - 18s - loss: 0.4272 - acc: 0.8187 - val_loss: 0.4551 - val_acc: 0.8193
+Epoch 3/25
+1489/1489 [==============================] - 19s - loss: 0.3554 - acc: 0.8516 - val_loss: 0.5402 - val_acc: 0.7831
+Epoch 4/25
+1489/1489 [==============================] - 19s - loss: 0.3022 - acc: 0.8852 - val_loss: 0.3245 - val_acc: 0.8976
+Epoch 5/25
+1489/1489 [==============================] - 18s - loss: 0.2514 - acc: 0.9033 - val_loss: 0.3136 - val_acc: 0.9096
+Epoch 6/25
+1489/1489 [==============================] - 19s - loss: 0.2051 - acc: 0.9308 - val_loss: 0.3834 - val_acc: 0.8614
+Epoch 7/25
+1489/1489 [==============================] - 18s - loss: 0.1666 - acc: 0.9429 - val_loss: 0.5268 - val_acc: 0.8072
+Epoch 8/25
+1489/1489 [==============================] - 18s - loss: 0.1391 - acc: 0.9530 - val_loss: 0.1777 - val_acc: 0.9398
+Epoch 9/25
+1489/1489 [==============================] - 18s - loss: 0.1112 - acc: 0.9671 - val_loss: 0.3464 - val_acc: 0.8976
+Epoch 10/25
+1489/1489 [==============================] - 18s - loss: 0.0975 - acc: 0.9684 - val_loss: 0.4164 - val_acc: 0.8554
+Epoch 11/25
+1489/1489 [==============================] - 20s - loss: 0.0697 - acc: 0.9799 - val_loss: 0.2502 - val_acc: 0.9157
+Epoch 12/25
+1489/1489 [==============================] - 19s - loss: 0.0581 - acc: 0.9852 - val_loss: 0.3972 - val_acc: 0.9036
+Epoch 13/25
+1489/1489 [==============================] - 19s - loss: 0.0446 - acc: 0.9913 - val_loss: 0.3567 - val_acc: 0.8976
+Epoch 14/25
+1489/1489 [==============================] - 21s - loss: 0.0389 - acc: 0.9906 - val_loss: 0.5089 - val_acc: 0.8554
+Epoch 15/25
+1489/1489 [==============================] - 20s - loss: 0.0295 - acc: 0.9919 - val_loss: 0.4340 - val_acc: 0.8916
+Epoch 16/25
+1489/1489 [==============================] - 21s - loss: 0.0238 - acc: 0.9953 - val_loss: 0.2954 - val_acc: 0.9157
+Epoch 17/25
+1489/1489 [==============================] - 21s - loss: 0.0202 - acc: 0.9973 - val_loss: 0.1356 - val_acc: 0.9518
+Epoch 18/25
+1489/1489 [==============================] - 20s - loss: 0.0186 - acc: 0.9960 - val_loss: 0.4355 - val_acc: 0.8916
+Epoch 19/25
+1489/1489 [==============================] - 20s - loss: 0.0142 - acc: 0.9953 - val_loss: 0.4193 - val_acc: 0.8976
+Epoch 20/25
+1489/1489 [==============================] - 20s - loss: 0.0092 - acc: 0.9973 - val_loss: 0.1981 - val_acc: 0.9337
+Epoch 21/25
+1489/1489 [==============================] - 20s - loss: 0.0108 - acc: 0.9966 - val_loss: 0.4743 - val_acc: 0.8855
+Epoch 22/25
+1489/1489 [==============================] - 20s - loss: 0.0077 - acc: 0.9973 - val_loss: 0.3160 - val_acc: 0.9157
+Epoch 23/25
+1489/1489 [==============================] - 19s - loss: 0.0093 - acc: 0.9966 - val_loss: 0.4139 - val_acc: 0.9096
+Epoch 24/25
+1489/1489 [==============================] - 20s - loss: 0.0063 - acc: 0.9987 - val_loss: 0.3814 - val_acc: 0.9036
+Epoch 25/25
+1489/1489 [==============================] - 20s - loss: 0.0053 - acc: 0.9993 - val_loss: 0.5146 - val_acc: 0.8855
+238/238 [==============================] - 1s     
+('\nTest accuracy:', 0.8907563030218878)
+(virtualenv2.7) C02QP68UG8WP:CarDetection ashis.laha$ cd /Users/ashis.laha/Documents/Python/CarDetection/model 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ python predictions.py --file="test/test_1.jpeg"
+Using TensorFlow backend.
+2018-02-23 16:17:00.479627: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:17:00.479665: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:17:00.479676: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:17:00.479684: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+URL ------> test/test_1.jpeg
+TESTING IMAGE -----> 8 (349, 145) JPEG
+[[  9.99692202e-01   3.07793845e-04]]
+......... It's CAR .........
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ python predictions.py --file="test/test_2.jpeg"
+Using TensorFlow backend.
+2018-02-23 16:18:26.861761: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:26.861787: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:26.861793: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:26.861798: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+URL ------> test/test_2.jpeg
+TESTING IMAGE -----> 8 (266, 189) JPEG
+[[ 0.02486336  0.97513664]]
+.......... Not A Car .......
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ python predictions.py --file="test/test_3.jpeg"
+Using TensorFlow backend.
+2018-02-23 16:18:53.485557: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:53.485582: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:53.485598: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:18:53.485603: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+URL ------> test/test_3.jpeg
+TESTING IMAGE -----> 8 (259, 195) JPEG
+[[  9.99999881e-01   8.42793213e-08]]
+......... It's CAR .........
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ python predictions.py --file="test/test_6.jpeg"
+Using TensorFlow backend.
+2018-02-23 16:19:05.785597: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:19:05.785635: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:19:05.785641: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-02-23 16:19:05.785646: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+URL ------> test/test_6.jpeg
+TESTING IMAGE -----> 8 (275, 183) JPEG
+[[  1.20179793e-04   9.99879837e-01]]
+.......... Not A Car .......
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ deactive
+-bash: deactive: command not found
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ 
+(virtualenv2.7) C02QP68UG8WP:model ashis.laha$ cd /Users/ashis.laha/Documents/Python/virtualenv2.7/bin 
+(virtualenv2.7) C02QP68UG8WP:bin ashis.laha$ deactivate
+C02QP68UG8WP:bin ashis.laha$ 
+C02QP68UG8WP:bin ashis.laha$ 
+C02QP68UG8WP:bin ashis.laha$ 
+C02QP68UG8WP:bin ashis.laha$ 
+C02QP68UG8WP:bin ashis.laha$ 
