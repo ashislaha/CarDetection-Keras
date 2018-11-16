@@ -378,4 +378,8 @@ If you want to test a random image whether car is present in the image or not :
  <img width="1127" alt="screen shot 2018-03-25 at 1 59 14 pm" src="https://user-images.githubusercontent.com/10649284/37873174-732eb780-3034-11e8-9ee2-be4c270dd0b2.png">
 
 <img width="1131" alt="screen shot 2018-03-25 at 2 00 03 pm" src="https://user-images.githubusercontent.com/10649284/37873175-73627c96-3034-11e8-962a-5c5cea1c2fcc.png">
+
+# video:
+https://www.youtube.com/watch?v=0nMcfBg_so0&t=18s
+
  
