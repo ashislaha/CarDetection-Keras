@@ -39,7 +39,7 @@ def grayscale(picture):
         for j in range(0, height):
             pixel=picture.getpixel((i,j))
             avg=(pixel[0]+pixel[1]+pixel[2])/3
-            res.putpixel((i,j),(avg,avg,avg))
+            res.putpixel((i,j),(int(avg),int(avg),int(avg)))
     res.show()
     return res
 
